@@ -8,6 +8,9 @@
 
 import React, { Component } from "react"
 import { Platform, StyleSheet, Text, View } from "react-native"
+if (__DEV__) {
+  import("./ReactotronConfig").then(() => console.log("Reactotron Configured"))
+}
 
 const instructions = Platform.select({
   ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
