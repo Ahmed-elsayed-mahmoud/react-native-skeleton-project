@@ -54,3 +54,9 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+# fonts
+src/res/fonts/index.js
+
+# images
+src/res/images/index.js

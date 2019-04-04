@@ -4,8 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "run-android": "react-native run-android",
+    "run-ios": "react-native run-ios",
     "test": "jest",
-    "lint": "tslint -p ."
+    "lint:ts": "tslint -p .",
+    "images": "node scripts/images.ts",
+    "fonts": "node scripts/fonts.ts",
+    "link": "rnpm link"
   },
   "dependencies": {
     "react": "16.8.3",
@@ -31,5 +36,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/res/fonts/"
+    ]
   }
 }
