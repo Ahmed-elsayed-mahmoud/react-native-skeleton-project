@@ -10,7 +10,7 @@
     "lint:ts": "tslint -p .",
     "images": "node scripts/images.ts",
     "fonts": "node scripts/fonts.ts",
-    "link": "rnpm link"
+    "link-pkgs": "react-native link"
   },
   "dependencies": {
     "react": "16.8.3",
