@@ -1,4 +1,4 @@
-// tslint:disable-next-line: no-var-keyword
+// tslint:disable: typedef no-var-keyword
 var fs = require("fs")
 
 const imageFileNames = () => {
@@ -16,8 +16,7 @@ const imageFileNames = () => {
   return Array.from(new Set(array))
 }
 
-// tslint:disable-next-line: no-var-keyword
-var generate = () => {
+const generateImageNames = () => {
   const properties = imageFileNames()
     .map((name) => {
       return `${name}: require("./${name}.png")`
@@ -32,4 +31,4 @@ export default images`
   fs.writeFileSync("src/res/images/index.ts", content, "utf8")
 }
 
-generate()
+generateImageNames()

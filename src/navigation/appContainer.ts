@@ -1,4 +1,3 @@
-import { Platform } from "react-native"
 import { createAppContainer, createStackNavigator } from "react-navigation"
 import { isIOS } from "../utils"
 import * as Screens from "../views"

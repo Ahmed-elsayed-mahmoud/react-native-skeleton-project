@@ -12,8 +12,7 @@ if (isDevEnv) {
     .catch((error) => console.error(error))
 }
 
-interface IProps {}
-export default class App extends Component<IProps> {
+export default class App extends Component {
   public render(): JSX.Element {
     return (
       <Provider store={store}>

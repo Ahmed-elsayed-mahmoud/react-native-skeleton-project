@@ -1,4 +1,4 @@
-// tslint:disable-next-line: no-var-keyword
+// tslint:disable: typedef no-var-keyword
 var fs = require("fs")
 
 const fontFileNames = () => {
@@ -8,8 +8,7 @@ const fontFileNames = () => {
   return Array.from(new Set(array))
 }
 
-// tslint:disable-next-line: no-var-keyword
-var generate = () => {
+const generateFontNames = () => {
   const properties = fontFileNames()
     .map((name) => {
       const key = String(name).replace(/\s|-/g, "")
@@ -25,4 +24,4 @@ export default fonts`
   fs.writeFileSync("src/res/fonts/index.ts", content, "utf8")
 }
 
-generate()
+generateFontNames()
