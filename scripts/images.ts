@@ -9,9 +9,9 @@ const imageFileNames = () => {
     })
     .map((file) => {
       return file
-        .replace(".png", "")
-        .replace("@2x.png", "")
         .replace("@3x.png", "")
+        .replace("@2x.png", "")
+        .replace(".png", "")
     })
   return Array.from(new Set(array))
 }
@@ -20,7 +20,7 @@ const imageFileNames = () => {
 var generate = () => {
   const properties = imageFileNames()
     .map((name) => {
-      return `${name}: require('./${name}.png')`
+      return `${name}: require("./${name}.png")`
     })
     .join(",\n  ")
 
@@ -29,7 +29,7 @@ var generate = () => {
 }
 export default images`
 
-  fs.writeFileSync("src/res/images/index.js", content, "utf8")
+  fs.writeFileSync("src/res/images/index.ts", content, "utf8")
 }
 
 generate()

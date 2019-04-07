@@ -8,6 +8,16 @@
 
 Start the application run:
 
+Generate images
+
+- `yarn images`
+
+Generate fonts
+
+- `yarn fonts`
+
+Start the application run:
+
 - `yarn run-ios` or `yarn run-android`
 
 Once the application has been deployed to the device/simulator, you can restart the metro bundler running
@@ -43,10 +53,9 @@ Once the application has been deployed to the device/simulator, you can restart 
     - **networking**: network services setup here
     - **storage**: storage service setup here
   - **state**: app store setup here
+    - **ducks**: ducks files (following https://github.com/erikras/ducks-modular-redux)
   - **utils**: helper methods
   - **views**: components declaration here
-    - **navigatorAViews**: contains components for navigator A
-    - **navigatorAViews**: contains components for navigator B
     - **shared**: any component to be used for more than one module of the application should go here
 
 ### Adding new images (example image in src/res/images/)

@@ -22,7 +22,7 @@ var generate = () => {
 }
 export default fonts`
 
-  fs.writeFileSync("src/res/fonts/index.js", content, "utf8")
+  fs.writeFileSync("src/res/fonts/index.ts", content, "utf8")
 }
 
 generate()
