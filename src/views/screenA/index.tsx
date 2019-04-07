@@ -1,23 +1,29 @@
 import React from "react"
 import { Button, Text, View } from "react-native"
+import { NavigationScreenProps } from "react-navigation"
 import { connect } from "react-redux"
+import { routes } from "../../navigation"
 import { clickAction } from "../../state/ducks/screenADucks"
 import styles from "./styles"
 
-interface IProps {
+interface IScreenAProps extends NavigationScreenProps {
   counter: number
   clickButton: () => {}
 }
 
-class ScreenA extends React.Component<IProps> {
+class ScreenA extends React.Component<IScreenAProps> {
   public render(): JSX.Element {
     return (
       <View style={styles.container}>
+        <Text style={styles.text}>Welcome to Screen A</Text>
         <Text style={styles.text}>{this.props.counter}</Text>
         <Button title={"increment"} onPress={this.props.clickButton} />
+        <Button title={"Go to Scren B"} onPress={this.navigateToScreenB} />
       </View>
     )
   }
+
+  private navigateToScreenB = () => this.props.navigation.navigate(routes.screenB)
 }
 
 const mapStateToProps = (state) => ({

@@ -13,7 +13,7 @@ var generate = () => {
   const properties = fontFileNames()
     .map((name) => {
       const key = String(name).replace(/\s|-/g, "")
-      return `${key.charAt(0).toLowerCase() + key.slice(1)}: '${name}'`
+      return `${key.charAt(0).toLowerCase() + key.slice(1)}: "${name}"`
     })
     .join(",\n  ")
 
