@@ -42,7 +42,7 @@ Once the application has been deployed to the device/simulator, you can restart 
   - **services**: add common global services here
     - **networking**: network services setup here
     - **storage**: storage service setup here
-  - **store**: app store setup here
+  - **state**: app store setup here
   - **utils**: helper methods
   - **views**: components declaration here
     - **navigatorAViews**: contains components for navigator A
