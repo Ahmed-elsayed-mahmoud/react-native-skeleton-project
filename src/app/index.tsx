@@ -4,8 +4,9 @@ import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/lib/integration/react"
 import { AppContainer, NavigationService } from "../navigation"
 import { persistor, store } from "../state/store"
+import { isDevEnv } from "../utils"
 
-if (__DEV__) {
+if (isDevEnv) {
   import("../../ReactotronConfig")
     .then(() => console.log("Reactotron Configured"))
     .catch((error) => console.error(error))

@@ -3,6 +3,7 @@ import { persistReducer, persistStore } from "redux-persist"
 import createSagaMiddleware from "redux-saga"
 import { configureStore } from "redux-starter-kit"
 import Reactotron from "../../ReactotronConfig"
+import { isDevEnv } from "../utils"
 import intialState from "./initialState"
 import persistConfig from "./persistConfig"
 import rootReducer from "./rootReducer"
@@ -15,7 +16,7 @@ const configureAppStore = () => {
 
   const appStore = configureStore({
     reducer: persistReducer(persistConfig, rootReducer),
-    middleware: __DEV__ ? [sagaMiddleware, Logger] : [sagaMiddleware],
+    middleware: isDevEnv ? [sagaMiddleware, Logger] : [sagaMiddleware],
     devTools: false,
     preloadedState: intialState,
     enhancers: [Reactotron.createEnhancer()]

@@ -1,5 +1,6 @@
 import { Platform } from "react-native"
 import { createAppContainer, createStackNavigator } from "react-navigation"
+import { isIOS } from "../utils"
 import * as Screens from "../views"
 import routes from "./routes"
 
@@ -15,7 +16,7 @@ const appNavigator = createStackNavigator(
   {
     // StackNavigatorConfig
     initialRouteName: routes.screenA,
-    headerMode: Platform.OS === "ios" ? "none" : "screen"
+    headerMode: isIOS ? "none" : "screen"
   }
 )
 
