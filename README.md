@@ -54,7 +54,7 @@ Once the application has been deployed to the device/simulator, you can restart 
   - **services**: add common global services here
     - **networking**: netwrok service setup here (using https://github.com/axios/axios)
     - **reactotron**: reactotron tool setup here
-    - **storage**: storage service setup here
+    - **storage**: Async Storage setup here
   - **state**: app store setup here (managad with Redux)
     - **ducks**: ducks files (following https://github.com/erikras/ducks-modular-redux)
   - **utils**: helper methods
