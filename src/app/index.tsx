@@ -7,7 +7,7 @@ import { persistor, store } from "../state/store"
 import { isDevEnv } from "../utils"
 
 if (isDevEnv) {
-  import("../../ReactotronConfig")
+  import("../services/reactotron")
     .then(() => console.log("Reactotron Configured"))
     .catch((error) => console.error(error))
 }
