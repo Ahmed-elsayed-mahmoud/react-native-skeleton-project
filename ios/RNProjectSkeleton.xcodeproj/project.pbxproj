@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -22,6 +23,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		275F2A7C4E024F14AFB268FC /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA54D053B548C799B16C11 /* libRNGestureHandler-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -37,10 +39,10 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		DF8A58B196574EC8A93B042E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCCE80740084918BF0215D6 /* libRNGestureHandler.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
-		DF8A58B196574EC8A93B042E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCCE80740084918BF0215D6 /* libRNGestureHandler.a */; };
-		275F2A7C4E024F14AFB268FC /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA54D053B548C799B16C11 /* libRNGestureHandler-tvOS.a */; };
+		F345D463875667450FE9F4B0 /* libPods-RNProjectSkeleton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF35CCED80F9C0844E8E6BD7 /* libPods-RNProjectSkeleton.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,20 +179,6 @@
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
 		};
-		2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
-			remoteInfo = privatedata;
-		};
-		2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
-			remoteInfo = "privatedata-tvOS";
-		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
@@ -268,19 +256,47 @@
 			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
 			remoteInfo = "cxxreact-tvOS";
 		};
-		3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+		59ED63D2225B4EB60044DC26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
-			remoteInfo = jschelpers;
+			remoteGlobalIDString = EDEBC6D6214B3E7000DD5AC8;
+			remoteInfo = jsi;
 		};
-		3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+		59ED63D4225B4EB60044DC26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
-			remoteInfo = "jschelpers-tvOS";
+			remoteGlobalIDString = EDEBC73B214B45A300DD5AC8;
+			remoteInfo = jsiexecutor;
+		};
+		59ED63D6225B4EB60044DC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FB6214C9A0900B7C4FE;
+			remoteInfo = "jsi-tvOS";
+		};
+		59ED63D8225B4EB60044DC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FEE214C9CF800B7C4FE;
+			remoteInfo = "jsiexecutor-tvOS";
+		};
+		59ED63DE225B4EB70044DC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461DFA17280F47EBB5610795 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		59ED63E0225B4EB70044DC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461DFA17280F47EBB5610795 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
 		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -339,18 +355,24 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNProjectSkeleton/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNProjectSkeleton/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1BCCE80740084918BF0215D6 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNProjectSkeleton-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNProjectSkeleton-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNProjectSkeleton-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNProjectSkeleton-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		461DFA17280F47EBB5610795 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		543BE33C412183F099220210 /* libPods-RNProjectSkeleton-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNProjectSkeleton-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		A49A7419467F6B3BB5302852 /* Pods-RNProjectSkeleton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNProjectSkeleton.debug.xcconfig"; path = "Target Support Files/Pods-RNProjectSkeleton/Pods-RNProjectSkeleton.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		BDDF1567D00679F8B1D443FD /* Pods-RNProjectSkeleton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNProjectSkeleton.release.xcconfig"; path = "Target Support Files/Pods-RNProjectSkeleton/Pods-RNProjectSkeleton.release.xcconfig"; sourceTree = "<group>"; };
+		D0AA54D053B548C799B16C11 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
+		D73BEE45CC6CEE624E590E63 /* libPods-RNProjectSkeleton-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNProjectSkeleton-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE5A6A5E113EFE5CAE9A482 /* libPods-RNProjectSkeletonTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNProjectSkeletonTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		461DFA17280F47EBB5610795 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		1BCCE80740084918BF0215D6 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		D0AA54D053B548C799B16C11 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FF35CCED80F9C0844E8E6BD7 /* libPods-RNProjectSkeleton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNProjectSkeleton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +402,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				DF8A58B196574EC8A93B042E /* libRNGestureHandler.a in Frameworks */,
+				F345D463875667450FE9F4B0 /* libPods-RNProjectSkeleton.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,16 +536,16 @@
 				3DAD3EA71DF850E9000B6D8A /* libyoga.a */,
 				3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */,
 				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
-				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
-				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
 				2DF0FFDF2056DD460020B375 /* libjsinspector.a */,
 				2DF0FFE12056DD460020B375 /* libjsinspector-tvOS.a */,
 				2DF0FFE32056DD460020B375 /* libthird-party.a */,
 				2DF0FFE52056DD460020B375 /* libthird-party.a */,
 				2DF0FFE72056DD460020B375 /* libdouble-conversion.a */,
 				2DF0FFE92056DD460020B375 /* libdouble-conversion.a */,
-				2DF0FFEB2056DD460020B375 /* libprivatedata.a */,
-				2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */,
+				59ED63D3225B4EB60044DC26 /* libjsi.a */,
+				59ED63D5225B4EB60044DC26 /* libjsiexecutor.a */,
+				59ED63D7225B4EB60044DC26 /* libjsi-tvOS.a */,
+				59ED63D9225B4EB60044DC26 /* libjsiexecutor-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -533,8 +556,30 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				FF35CCED80F9C0844E8E6BD7 /* libPods-RNProjectSkeleton.a */,
+				543BE33C412183F099220210 /* libPods-RNProjectSkeleton-tvOS.a */,
+				D73BEE45CC6CEE624E590E63 /* libPods-RNProjectSkeleton-tvOSTests.a */,
+				EAE5A6A5E113EFE5CAE9A482 /* libPods-RNProjectSkeletonTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59ED63AC225B4EB60044DC26 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				1BCCE80740084918BF0215D6 /* libRNGestureHandler.a */,
+				D0AA54D053B548C799B16C11 /* libRNGestureHandler-tvOS.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		59ED63DA225B4EB70044DC26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59ED63DF225B4EB70044DC26 /* libRNGestureHandler.a */,
+				59ED63E1225B4EB70044DC26 /* libRNGestureHandler-tvOS.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
@@ -592,6 +637,8 @@
 				00E356EF1AD99517003FC87E /* RNProjectSkeletonTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				F8D793243E92D15E753B6E34 /* Pods */,
+				59ED63AC225B4EB60044DC26 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -616,6 +663,15 @@
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F8D793243E92D15E753B6E34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A49A7419467F6B3BB5302852 /* Pods-RNProjectSkeleton.debug.xcconfig */,
+				BDDF1567D00679F8B1D443FD /* Pods-RNProjectSkeleton.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,6 +699,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNProjectSkeleton" */;
 			buildPhases = (
+				B8482A9318425F63E8786DAD /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
@@ -777,6 +834,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 59ED63DA225B4EB70044DC26 /* Products */;
+					ProjectRef = 461DFA17280F47EBB5610795 /* RNGestureHandler.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -908,20 +969,6 @@
 			remoteRef = 2DF0FFE82056DD460020B375 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2DF0FFEB2056DD460020B375 /* libprivatedata.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libprivatedata.a;
-			remoteRef = 2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libprivatedata-tvOS.a";
-			remoteRef = 2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -999,18 +1046,46 @@
 			remoteRef = 3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */ = {
+		59ED63D3225B4EB60044DC26 /* libjsi.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libjschelpers.a;
-			remoteRef = 3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			path = libjsi.a;
+			remoteRef = 59ED63D2225B4EB60044DC26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */ = {
+		59ED63D5225B4EB60044DC26 /* libjsiexecutor.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libjschelpers.a;
-			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			path = libjsiexecutor.a;
+			remoteRef = 59ED63D4225B4EB60044DC26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ED63D7225B4EB60044DC26 /* libjsi-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsi-tvOS.a";
+			remoteRef = 59ED63D6225B4EB60044DC26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ED63D9225B4EB60044DC26 /* libjsiexecutor-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsiexecutor-tvOS.a";
+			remoteRef = 59ED63D8225B4EB60044DC26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ED63DF225B4EB70044DC26 /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = 59ED63DE225B4EB70044DC26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ED63E1225B4EB70044DC26 /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = 59ED63E0225B4EB70044DC26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
@@ -1113,6 +1188,28 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		B8482A9318425F63E8786DAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNProjectSkeleton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1186,9 +1283,18 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = RNProjectSkeletonTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1196,15 +1302,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProjectSkeleton.app/RNProjectSkeleton";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1213,9 +1310,18 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = RNProjectSkeletonTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1223,24 +1329,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProjectSkeleton.app/RNProjectSkeleton";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A49A7419467F6B3BB5302852 /* Pods-RNProjectSkeleton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = RNProjectSkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1251,18 +1353,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNProjectSkeleton;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDF1567D00679F8B1D443FD /* Pods-RNProjectSkeleton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = RNProjectSkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1273,10 +1376,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNProjectSkeleton;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Release;
 		};
@@ -1292,8 +1391,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "RNProjectSkeleton-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1303,15 +1411,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1327,8 +1426,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "RNProjectSkeleton-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1338,15 +1446,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Release;
 		};
@@ -1361,8 +1460,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "RNProjectSkeleton-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1372,15 +1480,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProjectSkeleton-tvOS.app/RNProjectSkeleton-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1395,8 +1494,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "RNProjectSkeleton-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1406,15 +1514,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProjectSkeleton-tvOS.app/RNProjectSkeleton-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-				);
 			};
 			name = Release;
 		};
