@@ -1,4 +1,4 @@
-package com.rnprojectskeleton;
+package com.reactnativeskeletonproject;
 
 import android.app.Application;
 

@@ -1,5 +1,5 @@
 {
-  "name": "rnprojectskeleton",
+  "name": "reactnativeskeletonproject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -17,7 +17,8 @@
     "images": "node scripts/images.ts",
     "fonts": "node scripts/fonts.ts",
     "link-pkgs": "react-native link",
-    "build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd .."
+    "build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd ..",
+    "rename": "react-native-rename"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.2.4",
@@ -26,6 +27,7 @@
     "react-native": "0.59.3",
     "react-native-config": "^0.11.7",
     "react-native-gesture-handler": "^1.1.0",
+    "react-native-rename": "^2.4.1",
     "react-navigation": "^3.6.1",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",

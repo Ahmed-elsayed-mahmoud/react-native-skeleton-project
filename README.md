@@ -1,20 +1,17 @@
-#RNProjectStructure
+#React Native Skeleton Project
 
-### Installation
+### Set up
 
-- Make sure you're set up for [React Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
+Run the folllowing commands:
+
+- `git clone <this_repo_url> <directory_with_new_project_name>`
+- `cd <directory_with_your_new_project_name>`
+- `yarn install`
+- `yarn rename <"new_project_name">`
+
+Change the `name` value in `package.json` to your new project name
 
 ### Running the app
-
-Start the application run:
-
-Generate images
-
-- `yarn images`
-
-Generate fonts
-
-- `yarn fonts`
 
 Start the application run:
 
