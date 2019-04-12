@@ -10,9 +10,10 @@
     "images": "node scripts/images.ts",
     "fonts": "node scripts/fonts.ts",
     "link-pkgs": "react-native link",
-    "build-android": "cd android && ./gradlew assembleRelease && cd ..",
     "rename": "react-native-rename",
-    "lint": "./node_modules/.bin/eslint src/**/*.{ts,tsx,js}"
+    "lint": "./node_modules/.bin/eslint src/**/*.{ts,tsx,js}",
+    "ios:beta": "cd ios && fastlane beta && cd ..",
+    "android:beta": "cd android && fastlane beta && cd .."
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.2.4",

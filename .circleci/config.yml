@@ -30,17 +30,16 @@ jobs:
 
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
-
       - run: yarn install
-      - run:
-          name: build android
-          working_directory: ~/project/android
-          command: ./gradlew assembleRelease
-
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
           paths:
             - node_modules
+
+      - run:
+          name: build android
+          working_directory: ~/project/android
+          command: fastlane test
 
   ios:
     macos:
@@ -51,23 +50,27 @@ jobs:
 
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
-      - restore_cache:
-          key: pods-v1-{{ checksum "ios/Podfile" }}-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
-
       - run: yarn install
-      - run:
-          name: cocoapods
-          working_directory: ~/project/ios
-          command: pod install
-
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
           paths:
             - node_modules
+
+      - restore_cache:
+          key: pods-v1-{{ checksum "ios/Podfile" }}-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
+      - run:
+          name: cocoapods
+          working_directory: ~/project/ios
+          command: pod install
       - save_cache:
           key: pods-v1-{{ checksum "ios/Podfile" }}-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
           paths:
             - ios/Pods
+
+      - run:
+          name: test
+          working_directory: ~/project/ios
+          command: fastlane test
 
 workflows:
   version: 2

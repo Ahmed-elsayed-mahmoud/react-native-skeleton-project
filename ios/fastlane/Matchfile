@@ -1,0 +1,6 @@
+app_identifier ""
+username ""
+git_url ""
+git_branch ""
+readonly false
+clone_branch_directly true
