@@ -1,15 +1,9 @@
 import React from "react"
 import { Text, View } from "react-native"
-import { NavigationScreenProps } from "react-navigation"
 import { connect } from "react-redux"
 import styles from "./styles"
 
-interface IScreenBProps extends NavigationScreenProps {
-  counter: number
-  clickButton: () => {}
-}
-
-class ScreenA extends React.Component<IScreenBProps> {
+class ScreenB extends React.Component {
   public render(): JSX.Element {
     return (
       <View style={styles.container}>
@@ -19,11 +13,11 @@ class ScreenA extends React.Component<IScreenBProps> {
   }
 }
 
-const mapStateToProps = (state) => ({})
+const mapStateToProps = () => ({})
 
-const mapDispatchToProps = (dispatch) => ({})
+const mapDispatchToProps = () => ({})
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ScreenA)
+)(ScreenB)

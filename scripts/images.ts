@@ -1,12 +1,10 @@
-// tslint:disable: typedef no-var-keyword
-var fs = require("fs")
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const fileSys = require("fs")
 
 const imageFileNames = () => {
-  const array = fs
+  const array = fileSys
     .readdirSync("src/res/images")
-    .filter((file) => {
-      return file.endsWith(".png")
-    })
+    .filter((file) => file.endsWith(".png"))
     .map((file) => {
       return file
         .replace("@3x.png", "")
@@ -26,9 +24,10 @@ const generateImageNames = () => {
   const content = `const images = {
   ${properties}
 }
+
 export default images`
 
-  fs.writeFileSync("src/res/images/index.ts", content, "utf8")
+  fileSys.writeFileSync("src/res/images/index.ts", content, "utf8")
 }
 
 generateImageNames()

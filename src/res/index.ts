@@ -1,2 +1,3 @@
-const R = {}
-export default R
+import images from "./images"
+
+export const R = { images }

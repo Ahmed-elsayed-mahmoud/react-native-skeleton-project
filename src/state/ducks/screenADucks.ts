@@ -1,4 +1,3 @@
-import { SagaIterator } from "redux-saga"
 import { put, takeLatest } from "redux-saga/effects"
 
 // Action Types
@@ -33,10 +32,10 @@ export default function(state = initialState, action): IScreenAState {
 }
 
 // Sagas
-function* clickButton(action): SagaIterator {
+function* clickButton() {
   yield put(incrementAction())
 }
 
-export function* screenASubscription(): SagaIterator {
+export function* screenASubscription() {
   yield takeLatest(BTN_CLICK, clickButton)
 }

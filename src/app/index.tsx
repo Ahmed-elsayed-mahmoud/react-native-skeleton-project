@@ -13,14 +13,14 @@ if (isDevEnv) {
 }
 
 export default class App extends Component {
-  public render(): JSX.Element {
+  public render() {
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }}>
             <AppContainer
               ref={(navigatorRef) => NavigationService.setTopLevelNavigator(navigatorRef)}
-              persistenceKey={"NavigationState"}
+              persistenceKey="NavigationState"
             />
           </SafeAreaView>
         </PersistGate>

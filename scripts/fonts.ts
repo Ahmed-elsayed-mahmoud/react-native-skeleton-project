@@ -1,10 +1,13 @@
-// tslint:disable: typedef no-var-keyword
-var fs = require("fs")
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const fs = require("fs")
 
 const fontFileNames = () => {
-  const array = fs.readdirSync("src/res/fonts").map((file) => {
-    return file.replace(".ttf", "")
-  })
+  const array = fs
+    .readdirSync("src/res/fonts")
+    .filter((file) => file.endsWith(".ttf"))
+    .map((file) => {
+      return file.replace(".ttf", "")
+    })
   return Array.from(new Set(array))
 }
 
@@ -19,6 +22,7 @@ const generateFontNames = () => {
   const content = `const fonts = {
   ${properties}
 }
+
 export default fonts`
 
   fs.writeFileSync("src/res/fonts/index.ts", content, "utf8")

@@ -12,7 +12,7 @@ interface IScreenAProps extends NavigationScreenProps {
 }
 
 class ScreenA extends React.Component<IScreenAProps> {
-  public render(): JSX.Element {
+  public render() {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Welcome to Screen A</Text>

@@ -4,10 +4,12 @@
 
 Run the folllowing commands:
 
-- `git clone <this_repo_url> <directory_with_new_project_name>`
-- `cd <directory_with_your_new_project_name>`
-- `yarn install`
-- `yarn rename <"new_project_name">`
+```
+$ git clone <this_repo_url> <directory_with_new_project_name>
+$ cd <directory_with_your_new_project_name>
+$ yarn install
+$ yarn rename <"new_project_name">
+```
 
 Change the `name` value in `package.json` to your new project name
 
@@ -25,6 +27,8 @@ Once the application has been deployed to the device/simulator, you can restart 
 
 - [Cocoapods v1.6.1](https://github.com/CocoaPods/CocoaPods)
 - [Reactotron](https://github.com/infinitered/reactotron)
+- [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint)
+- [Prettier](https://prettier.io/)
 
 ### Relevant technologies
 
@@ -75,13 +79,19 @@ Once the application has been deployed to the device/simulator, you can restart 
 
 ### NOTES
 
+- Don't manually edit files `src/res/images/index.ts` and `src/res/fonts/index.ts`. Instead, use scripts `yarn images` and `yarn fonts`.
+
 - This app uses `react-native-config` for handling global configurations (like server url, google api key, ..etc).
-- If your global configurations in development are the same as in stagging and production, put your configurations in `.env`.
-- If your global configurations in development are different from stagging and production:
-  - put your development configurations in `.env.dev`, stagging configurations in `.env.stag` and production configurations in `.env.prod`.
-  - for Android:
-    - instead of `yarn run-android`, use `yarn run-android-dev`, `yarn run-android-stag` or `yarn run-android-prod` according to your environment mode.
-    - use `yarn build-android-prod` script to generate Android .apk when it's time to deploy.
-  - for IOS:
-    - instead of `yarn run-ios`, use `yarn run-ios-dev`, `yarn run-ios-stag` or `yarn run-ios-prod` according to your environment mode.
-    - from Xcode, You can find DEV, STAG, PROD schemas for each enviroment mode. Don't forget to use PROD schema when it's time to deploy.
+  - If your global configurations in development are the same as in stagging and production, put your configurations in `.env`.
+  - If your global configurations in development are different from stagging and production:
+    - put your development configurations in `.env.dev`, stagging configurations in `.env.stag` and production configurations in `.env.prod`.
+    - for Android:
+      - instead of `yarn run-android`, use `yarn run-android-dev`, `yarn run-android-stag` or `yarn run-android-prod` according to your environment mode.
+      - use `yarn build-android-prod` script to generate Android .apk when it's time to deploy.
+    - for IOS:
+      - instead of `yarn run-ios`, use `yarn run-ios-dev`, `yarn run-ios-stag` or `yarn run-ios-prod` according to your environment mode.
+      - from Xcode, You can find DEV, STAG, PROD schemas for each enviroment mode. Don't forget to use PROD schema when it's time to deploy.
+
+### Contributors
+
+- [Ahmed Khattab](https://github.com/khattab93)
