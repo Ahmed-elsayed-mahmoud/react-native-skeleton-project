@@ -16,6 +16,7 @@
     "images": "node scripts/images.ts",
     "fonts": "node scripts/fonts.ts",
     "link-pkgs": "react-native link",
+    "build-android": "cd android && ./gradlew assembleRelease && cd ..",
     "build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd ..",
     "rename": "react-native-rename"
   },
