@@ -5,19 +5,12 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "run-android": "react-native run-android",
-    "run-android-dev": "ENVFILE=.env.dev react-native run-android",
-    "run-android-stag": "ENVFILE=.env.stag react-native run-android",
-    "run-android-prod": "ENVFILE=.env.prod react-native run-android",
     "run-ios": "react-native run-ios",
-    "run-ios-dev": "ENVFILE=.env.dev react-native run-ios",
-    "run-ios-stag": "ENVFILE=.env.stag react-native run-ios",
-    "run-ios-prod": "ENVFILE=.env.prod react-native run-ios",
     "test": "jest",
     "images": "node scripts/images.ts",
     "fonts": "node scripts/fonts.ts",
     "link-pkgs": "react-native link",
     "build-android": "cd android && ./gradlew assembleRelease && cd ..",
-    "build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd ..",
     "rename": "react-native-rename"
   },
   "dependencies": {

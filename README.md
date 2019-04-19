@@ -85,25 +85,6 @@ Once the application has been deployed to the device/simulator, you can restart 
 
 - This app uses `react-native-config` for handling global configurations (like server url, google api key, ..etc).
 
-  - If your global configurations in development are the same as in stagging and production:
-
-    - put your configurations in `.env`.
-    - for Android:
-      - use `yarn run-android` to run the app.
-      - use `yarn build-android` script to generate Android .apk when it's time to deploy.
-    - for IOS:
-      - use `yarn run-ios` to run the app.
-
-  - If your global configurations in development are different from stagging and production:
-
-    - put your development configurations in `.env.dev`, stagging configurations in `.env.stag` and production configurations in `.env.prod`.
-    - for Android:
-      - instead of `yarn run-android`, use `yarn run-android-dev`, `yarn run-android-stag` or `yarn run-android-prod` according to your environment mode.
-      - instead of `yarn build-android`, use `yarn build-android-prod` script to generate Android .apk when it's time to deploy.
-    - for IOS:
-      - instead of `yarn run-ios`, use `yarn run-ios-dev`, `yarn run-ios-stag` or `yarn run-ios-prod` according to your environment mode.
-      - from Xcode, You can find DEV, STAG, PROD schemas for each enviroment mode. Don't forget to use PROD schema when it's time to deploy.
-
 ## Contributors
 
 - [Ahmed Khattab](https://github.com/khattab93)
