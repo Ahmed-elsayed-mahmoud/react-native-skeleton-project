@@ -36,9 +36,11 @@ Once the application has been deployed to the device/simulator, you can restart 
 - [Redux](https://github.com/reduxjs/redux)
 - [React Navigation](https://github.com/react-navigation/react-navigation)
 - [React Native Config](https://github.com/luggit/react-native-config)
+- [CircleCI](https://circleci.com/)
 
 ## App Structure
 
+- **.circleci**: contains circleci setup
 - **android**: contains android project
 - **ios**: contains ios project
 - **scripts**: contains scripts

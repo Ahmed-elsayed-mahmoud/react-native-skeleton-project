@@ -1,0 +1,79 @@
+version: 2
+jobs:
+  node:
+    working_directory: ~/project
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+
+      - run: yarn install
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+            - yarn.lock
+
+  android:
+    working_directory: ~/project
+    docker:
+      - image: circleci/android:api-28-node8-alpha
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
+
+      - run: yarn install
+      - run:
+          name: build android
+          working_directory: ~/project/android
+          command: ./gradlew assembleRelease
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
+          paths:
+            - node_modules
+
+  ios:
+    macos:
+      xcode: "10.0"
+    working_directory: ~/project
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
+      - restore_cache:
+          key: pods-v1-{{ checksum "ios/Podfile" }}-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
+
+      - run: yarn install
+      - run:
+          name: cocoapods
+          working_directory: ~/project/ios
+          command: pod install
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ arch }}
+          paths:
+            - node_modules
+      - save_cache:
+          key: pods-v1-{{ checksum "ios/Podfile" }}-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
+          paths:
+            - ios/Pods
+
+workflows:
+  version: 2
+  node-android-ios:
+    jobs:
+      - node
+      - android:
+          requires:
+            - node
+      - ios:
+          requires:
+            - node
