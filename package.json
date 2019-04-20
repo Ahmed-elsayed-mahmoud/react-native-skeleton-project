@@ -11,7 +11,8 @@
     "fonts": "node scripts/fonts.ts",
     "link-pkgs": "react-native link",
     "build-android": "cd android && ./gradlew assembleRelease && cd ..",
-    "rename": "react-native-rename"
+    "rename": "react-native-rename",
+    "lint": "./node_modules/.bin/eslint src/**/*.{ts,tsx,js}"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.2.4",
