@@ -1,11 +1,8 @@
-fastlane_version "2.120.0"
-
 default_platform(:ios)
 
 platform :ios do
   
   before_all do
-    #ensure_git_branch(branch: 'branch_name')
     ensure_git_status_clean
     git_pull
   end
@@ -18,11 +15,12 @@ platform :ios do
   
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(scheme: 'ReactNativeSkeletonProject')
   end
   
   desc 'Build the iOS application.'
   private_lane :build do
+    #ensure_git_branch(branch: 'branch_name')
     match(type: 'appstore')
     build_number=latest_testflight_build_number + 1
     increment_build_number(build_number: build_number)

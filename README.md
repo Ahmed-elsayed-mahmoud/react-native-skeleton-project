@@ -15,9 +15,20 @@ Change the `name` value in `package.json` to your new project name
 
 ## Running the app
 
-Start the application run:
+Start the application on Android:
 
-- `yarn run-ios` or `yarn run-android`
+```
+yarn bundle-android
+yarn run-android
+```
+
+Start the application on Android:
+
+```
+yarn bundle-ios
+yarn pods
+yarn run-ios
+```
 
 Once the application has been deployed to the device/simulator, you can restart the metro bundler running
 
@@ -37,6 +48,7 @@ Once the application has been deployed to the device/simulator, you can restart 
 - [React Navigation](https://github.com/react-navigation/react-navigation)
 - [React Native Config](https://github.com/luggit/react-native-config)
 - [CircleCI](https://circleci.com/)
+- [Fastlane](https://fastlane.tools/)
 
 ## App Structure
 
@@ -84,6 +96,18 @@ Once the application has been deployed to the device/simulator, you can restart 
 - Don't manually edit files `src/res/images/index.ts` and `src/res/fonts/index.ts`. Instead, use scripts `yarn images` and `yarn fonts`.
 
 - This app uses `react-native-config` for handling global configurations (like server url, google api key, ..etc).
+
+- To deploy IOS beta to Testflight:
+
+  - add missing parts in `ios/fastlane/Matchfile`, `ios/fastlane/Fastfile` and `ios/fastlane/Appfile`
+  - update version number in xcode. (build number will be updated by fastlane)
+  - run `yarn ios:beta`
+
+- To deploy Android beta:
+  - add missing parts in `ios/fastlane/Fastfile` and `ios/fastlane/Appfile`
+  - add code signing credentials
+  - update version name in `android/app/build.gradle`. (version code will be updated by fastlane)
+  - run `yarn android:beta`
 
 ## Contributors
 

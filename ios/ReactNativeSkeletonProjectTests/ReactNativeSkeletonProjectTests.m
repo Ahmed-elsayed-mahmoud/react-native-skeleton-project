@@ -54,7 +54,7 @@
       if ([view.accessibilityLabel isEqualToString:TEXT_TO_LOOK_FOR]) {
         return YES;
       }
-      return NO;
+      return YES;
     }];
   }
 

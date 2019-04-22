@@ -3,7 +3,6 @@ default_platform(:ios)
 platform :ios do
   
   before_all do
-    #ensure_git_branch(branch: 'branch_name')
     ensure_git_status_clean
     git_pull
   end
@@ -15,6 +14,7 @@ platform :ios do
 
   desc 'Build the Android application.'
   private_lane :build do
+    #ensure_git_branch(branch: 'branch_name')
     gradle(task: 'incrementVersionCode')
     gradle(task: 'clean')
     gradle(task: 'assemble', build_type: 'Release')
