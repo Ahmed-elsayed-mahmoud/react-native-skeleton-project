@@ -3,10 +3,15 @@ default_platform(:ios)
 platform :ios do
   
   before_all do
-    ensure_git_status_clean
-    git_pull
+    #ensure_git_status_clean
+    #git_pull
   end
-
+  
+  lane :x do
+    bundle_command = %(pwd && cd #{ENV['PWD']} && pwd && cd .. && pwd)
+    sh bundle_command
+  end
+  
   desc 'Fetch certificates and provisioning profiles'
   lane :certificates do
     match(type: 'development')
@@ -21,6 +26,8 @@ platform :ios do
   desc 'Build the iOS application.'
   private_lane :build do
     #ensure_git_branch(branch: 'branch_name')
+    bundle_command = %(cd ../.. && yarn ios-bundle && cd ios/fastlane)
+    sh bundle_command
     match(type: 'appstore')
     build_number=latest_testflight_build_number + 1
     increment_build_number(build_number: build_number)
@@ -29,6 +36,7 @@ platform :ios do
 
   desc 'Ship to Testflight.'
   lane :beta do
+    build
     pilot
     commit_version_bump(message: 'Bump build')
     push_to_git_remote

@@ -12,11 +12,13 @@
     "link-pkgs": "react-native link",
     "rename": "react-native-rename",
     "lint": "./node_modules/.bin/eslint src/**/*.{ts,tsx,js}",
-    "bundle-android": "cd android && bundle install && cd ..",
-    "bundle-ios": "cd ios && bundle install && cd ..",
+    "android-gems": "cd android && bundle install && cd ..",
+    "ios-gems": "cd ios && bundle install && cd ..",
     "pods": "cd ios && bundle exec pod install",
-    "ios:beta": "cd ios && fastlane beta && cd ..",
-    "android:beta": "cd android && fastlane beta && cd .."
+    "android-bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "ios-bundle": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios/main.jsbundle --assets-dest ios",
+    "android-beta": "cd android && fastlane beta && cd ..",
+    "ios-beta": "cd ios && fastlane beta && cd .."
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.2.4",

@@ -18,14 +18,14 @@ Change the `name` value in `package.json` to your new project name
 Start the application on Android:
 
 ```
-yarn bundle-android
+yarn android-gems
 yarn run-android
 ```
 
 Start the application on Android:
 
 ```
-yarn bundle-ios
+yarn ios-gems
 yarn pods
 yarn run-ios
 ```
@@ -97,17 +97,17 @@ Once the application has been deployed to the device/simulator, you can restart 
 
 - This app uses `react-native-config` for handling global configurations (like server url, google api key, ..etc).
 
-- To deploy IOS beta to Testflight:
+- [This feature is not tested]To deploy IOS beta to Testflight:
 
   - add missing parts in `ios/fastlane/Matchfile`, `ios/fastlane/Fastfile` and `ios/fastlane/Appfile`
   - update version number in xcode. (build number will be updated by fastlane)
-  - run `yarn ios:beta`
+  - run `yarn ios-beta`
 
-- To deploy Android beta:
+- [This feature is not tested]To deploy Android beta:
   - add missing parts in `ios/fastlane/Fastfile` and `ios/fastlane/Appfile`
   - add code signing credentials
   - update version name in `android/app/build.gradle`. (version code will be updated by fastlane)
-  - run `yarn android:beta`
+  - run `yarn android-beta`
 
 ## Contributors
 
