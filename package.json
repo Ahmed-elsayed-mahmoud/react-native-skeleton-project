@@ -1,24 +1,71 @@
 {
-  "name": "RNProjectSkeleton",
+  "name": "reactnativeskeletonproject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "run-android": "react-native run-android",
+    "run-ios": "react-native run-ios",
+    "test": "jest",
+    "images": "node scripts/images.ts",
+    "fonts": "node scripts/fonts.ts",
+    "link-pkgs": "react-native link",
+    "rename": "react-native-rename",
+    "lint": "./node_modules/.bin/eslint src/**/*.{ts,tsx,js}",
+    "android-gems": "cd android && bundle install && cd ..",
+    "ios-gems": "cd ios && bundle install && cd ..",
+    "pods": "cd ios && bundle exec pod install",
+    "android-bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "ios-bundle": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios/main.jsbundle --assets-dest ios",
+    "android-beta": "cd android && fastlane beta && cd ..",
+    "ios-beta": "cd ios && fastlane beta && cd .."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.2.4",
+    "axios": "^0.18.0",
     "react": "16.8.3",
-    "react-native": "0.59.3"
+    "react-native": "0.59.3",
+    "react-native-config": "^0.11.7",
+    "react-native-gesture-handler": "^1.1.0",
+    "react-native-rename": "^2.4.1",
+    "react-navigation": "^3.6.1",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.2",
+    "redux-starter-kit": "^0.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/runtime": "^7.4.3",
+    "@types/react": "^16.8.10",
+    "@types/react-native": "^0.57.42",
+    "@types/react-redux": "^7.0.6",
+    "@types/redux-logger": "^3.0.7",
+    "@types/redux-persist": "^4.3.1",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
     "babel-jest": "^24.7.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-react": "^7.12.4",
     "jest": "^24.7.0",
     "metro-react-native-babel-preset": "^0.53.1",
-    "react-test-renderer": "16.8.3"
+    "prettier": "^1.16.4",
+    "react-native-typescript-transformer": "^1.2.12",
+    "react-test-renderer": "16.8.3",
+    "reactotron-react-native": "^3.2.1",
+    "reactotron-redux": "^3.1.0",
+    "reactotron-redux-saga": "^4.2.1",
+    "typescript": "^3.4.1"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/res/fonts/"
+    ]
   }
 }

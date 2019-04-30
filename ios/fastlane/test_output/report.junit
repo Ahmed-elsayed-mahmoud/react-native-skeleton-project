@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='ReactNativeSkeletonProjectTests.xctest' tests='2' failures='2'>
+  <testsuite name='ReactNativeSkeletonProjectTests' tests='2' failures='2'>
+    <testcase classname='ReactNativeSkeletonProjectTests' name='testRendersWelcomeScreen'>
+      <failure message='((redboxError) == nil) failed: &quot;TypeError: TypeError: param is not an Object. (evaluating &apos;&apos;__isNative&apos; in param&apos;)'>ReactNativeSkeletonProjectTests/ReactNativeSkeletonProjectTests.m:63</failure>
+    </testcase>
+    <testcase classname='ReactNativeSkeletonProjectTests' name='testRendersWelcomeScreen'>
+      <failure message='((foundElement) is true) failed - Couldn&apos;t find element with text &apos;Welcome to React Native!&apos; in 600 seconds'>ReactNativeSkeletonProjectTests/ReactNativeSkeletonProjectTests.m:64</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

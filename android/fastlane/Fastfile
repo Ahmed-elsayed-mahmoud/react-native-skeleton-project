@@ -1,0 +1,32 @@
+default_platform(:ios)
+
+platform :ios do
+  
+  before_all do
+    ensure_git_status_clean
+    git_pull
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc 'Build the Android application.'
+  private_lane :build do
+    #ensure_git_branch(branch: 'branch_name')
+    bundle_command = %(cd ../.. && yarn android-bundle && cd android/fastlane)
+    sh bundle_command
+    gradle(task: 'incrementVersionCode')
+    gradle(task: 'clean')
+    gradle(task: 'assemble', build_type: 'Release')
+  end
+
+  desc 'Ship to Playstore Beta.'
+  lane :beta do
+    build
+    supply(track: 'beta', track_promote_to: 'beta')
+    git_commit(path: ['./gradle.properties'], message: 'Bump versionCode')
+    push_to_git_remote
+  end
+end
