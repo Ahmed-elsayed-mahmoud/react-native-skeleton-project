@@ -1,10 +1,10 @@
 import Logger from "redux-logger"
 import { persistReducer, persistStore } from "redux-persist"
 import createSagaMiddleware from "redux-saga"
-import { configureStore } from "redux-starter-kit"
+import { configureStore } from "@reduxjs/toolkit"
 import Reactotron from "../services/reactotron"
 import { isDevEnv } from "../utils"
-import intialState from "./initialState"
+import initialState from "./initialState"
 import persistConfig from "./persistConfig"
 import rootReducer from "./rootReducer"
 import rootSaga from "./rootSaga"
@@ -18,7 +18,7 @@ const configureAppStore = () => {
     reducer: persistReducer(persistConfig, rootReducer),
     middleware: isDevEnv ? [sagaMiddleware, Logger] : [sagaMiddleware],
     devTools: false,
-    preloadedState: intialState,
+    preloadedState: initialState,
     enhancers: [Reactotron.createEnhancer()]
   })
 
