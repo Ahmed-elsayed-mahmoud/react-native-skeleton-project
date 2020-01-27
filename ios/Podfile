@@ -7,5 +7,31 @@ target 'ReactNativeSkeletonProject' do
 
   # Pods for ReactNativeSkeletonProject
 
+  node_path = '../node_modules'
+  rn_path = "#{node_path}/react-native"
+
+  # Insert any other React Native libraries you would like to integrate (eg. RCTActionSheet, RCTCameraRoll, RCTPushNotification, ...)
+  # The list of supported subspecs is available in https://github.com/facebook/react-native/blob/v0.59.10/React.podspec
+  pod 'React', :path => rn_path , :subspecs => [
+    'Core',           # AppRegistry, StyleSheet, View and other core React Native libraries
+    'CxxBridge',      # Needed for RN >= 0.47
+    'DevSupport',      # Include this to enable In-App Devmenu if RN >= 0.43
+    'RCTText',        # Text library
+    'RCTImage',       # Image library
+    'RCTNetwork',     # Network library (fetch, ...)
+    'RCTWebSocket',   # Needed fro debugging
+    'RCTAnimation',   # Animation library
+  ]
+  
+  # Needed for RN >= 0.41
+  pod 'yoga', :path => "#{rn_path}/ReactCommon/yoga"
+
+  # Third party deps podspec link
+  pod 'DoubleConversion', :podspec => "#{rn_path}/third-party-podspecs/DoubleConversion.podspec"
+  pod 'Folly', :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec"
+  pod 'glog', :podspec => "#{rn_path}/third-party-podspecs/GLog.podspec"
+
+  pod 'RNCAsyncStorage', :path => "#{node_path}/@react-native-community/async-storage"
+
 end
 
