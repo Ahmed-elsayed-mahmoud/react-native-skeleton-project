@@ -20,7 +20,6 @@ export default class App extends Component {
           <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }}>
             <AppContainer
               ref={(navigatorRef) => NavigationService.setTopLevelNavigator(navigatorRef)}
-              persistenceKey="NavigationState"
             />
           </SafeAreaView>
         </PersistGate>
