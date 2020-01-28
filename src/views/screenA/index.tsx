@@ -2,7 +2,7 @@ import React from "react"
 import { Button, Text, View } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { connect } from "react-redux"
-import { routes } from "../../navigation"
+import routes from "../../navigation/routes"
 import { clickAction } from "../../state/ducks/screenADucks"
 import styles from "./styles"
 
