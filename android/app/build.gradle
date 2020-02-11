@@ -178,9 +178,6 @@ android {
 }
 
 dependencies {
-    implementation project(':@react-native-community_async-storage')
-    implementation project(':react-native-config')
-    implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
@@ -202,9 +199,11 @@ task copyDownloadableDepsToLibs(type: Copy) {
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
 
-task('incrementVersionCode') << {
-    def versionCode = Integer.parseInt(VERSION_CODE) + 1
-    ant.propertyfile(file: "../gradle.properties") {
-        entry(key: "VERSION_CODE", value: versionCode)
+task('incrementVersionCode') {
+    doLast {
+        def versionCode = Integer.parseInt(VERSION_CODE) + 1
+        ant.propertyfile(file: "../gradle.properties") {
+            entry(key: "VERSION_CODE", value: versionCode)
+        }
     }
 }
