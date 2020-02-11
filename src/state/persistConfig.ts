@@ -1,10 +1,11 @@
 import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2"
-import storage from "redux-persist/lib/storage"
+import { AppStorage } from "../services/storage"
 
 const persistConfig = {
   key: "root",
-  storage,
+  storage: AppStorage,
   stateReconciler: autoMergeLevel2,
   whitelist: ["screenA"]
 }
+
 export default persistConfig

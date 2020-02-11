@@ -24,4 +24,4 @@ async function getItem(
   }
 }
 
-export default { storeItem, getItem }
+export { AsyncStorage as AppStorage, storeItem, getItem }
