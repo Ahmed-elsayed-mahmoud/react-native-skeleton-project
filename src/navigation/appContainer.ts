@@ -1,4 +1,5 @@
-import { createAppContainer, createStackNavigator } from "react-navigation"
+import { createAppContainer } from "react-navigation"
+import { createStackNavigator } from "react-navigation-stack"
 import { isIOS } from "../utils"
 import * as Screens from "../views"
 import routes from "./routes"
