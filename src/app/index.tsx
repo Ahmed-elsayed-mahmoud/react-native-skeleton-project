@@ -1,10 +1,10 @@
-import React, { Component } from "react"
+import * as React from "react"
 import { SafeAreaView } from "react-navigation"
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/lib/integration/react"
-import { AppContainer, NavigationService } from "../navigation"
-import { persistor, store } from "../state/store"
-import { isDevEnv } from "../utils"
+import { AppContainer, NavigationService } from "@reactnativeskeletonproject/navigation"
+import { persistor, store } from "@reactnativeskeletonproject/state"
+import { isDevEnv } from "@reactnativeskeletonproject/utils"
 
 if (isDevEnv) {
   import("../services/reactotron")
@@ -12,7 +12,7 @@ if (isDevEnv) {
     .catch((error) => console.error(error))
 }
 
-export default class App extends Component {
+export default class App extends React.Component {
   public render() {
     return (
       <Provider store={store}>

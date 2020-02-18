@@ -7,7 +7,7 @@ const axiosRequest = (props) =>
     .catch((err) => console.log(err))
 
 const apis = {
-  example: () => axiosRequest({ method: "GET", url: endpoints.example })
+  example: () => axiosRequest({ method: "GET", url: endpoints.example }),
 }
 
 export default apis

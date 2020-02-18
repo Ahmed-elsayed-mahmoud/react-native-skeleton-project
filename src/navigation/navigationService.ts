@@ -2,7 +2,7 @@ import {
   NavigationActions,
   StackActions,
   NavigationParams,
-  NavigationNavigateAction
+  NavigationNavigateAction,
 } from "react-navigation"
 
 let navigator
@@ -31,7 +31,7 @@ function push(
   navigator.dispatch(StackActions.push({ routeName, params, action }))
 }
 
-function pop(numberOfScreens: number = 0): void {
+function pop(numberOfScreens = 0): void {
   navigator.dispatch(StackActions.pop({ n: numberOfScreens }))
 }
 
@@ -40,5 +40,5 @@ export default {
   navigate,
   goBack,
   push,
-  pop
+  pop,
 }

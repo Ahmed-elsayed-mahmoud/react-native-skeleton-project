@@ -1,14 +1,17 @@
-import React from "react"
+import * as React from "react"
 import { Button, Text, View } from "react-native"
-import { NavigationScreenProps } from "react-navigation"
+import { NavigationRoute } from "react-navigation"
+import { NavigationStackProp } from "react-navigation-stack"
 import { connect } from "react-redux"
-import routes from "../../navigation/routes"
-import { clickAction } from "../../state/ducks/screenADucks"
+import routes from "@reactnativeskeletonproject/navigation/routes"
+import { clickAction } from "@reactnativeskeletonproject/state/ducks/screenADucks"
 import styles from "./styles"
 
-interface IScreenAProps extends NavigationScreenProps {
+interface IScreenParams {}
+interface IScreenAProps {
   counter: number
   clickButton: () => {}
+  navigation: NavigationStackProp<NavigationRoute, IScreenParams>
 }
 
 class ScreenA extends React.Component<IScreenAProps> {
@@ -18,7 +21,7 @@ class ScreenA extends React.Component<IScreenAProps> {
         <Text style={styles.text}>Welcome to Screen A</Text>
         <Text style={styles.text}>{this.props.counter}</Text>
         <Button title={"increment"} onPress={this.props.clickButton} />
-        <Button title={"Go to Scren B"} onPress={this.navigateToScreenB} />
+        <Button title={"Go to Screen B"} onPress={this.navigateToScreenB} />
       </View>
     )
   }
@@ -27,14 +30,11 @@ class ScreenA extends React.Component<IScreenAProps> {
 }
 
 const mapStateToProps = (state) => ({
-  counter: state.screenA.counter
+  counter: state.screenA.counter,
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  clickButton: () => dispatch(clickAction())
+  clickButton: () => dispatch(clickAction()),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ScreenA)
+export default connect(mapStateToProps, mapDispatchToProps)(ScreenA)

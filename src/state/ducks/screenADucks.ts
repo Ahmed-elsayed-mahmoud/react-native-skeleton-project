@@ -6,11 +6,11 @@ const INCREMENT = "increment"
 
 // Action Creators
 export const clickAction = () => ({
-  type: BTN_CLICK
+  type: BTN_CLICK,
 })
 
 export const incrementAction = () => ({
-  type: INCREMENT
+  type: INCREMENT,
 })
 
 // Reducer
@@ -19,7 +19,7 @@ interface IScreenAState {
 }
 
 const initialState: IScreenAState = {
-  counter: 0
+  counter: 0,
 }
 
 export default function(state = initialState, action): IScreenAState {

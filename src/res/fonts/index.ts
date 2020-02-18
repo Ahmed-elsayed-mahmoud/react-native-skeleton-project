@@ -1,5 +1,5 @@
 const fonts = {
-  sFUITextRegular: "SFUIText-Regular"
+  sFUITextRegular: "SFUIText-Regular",
 }
 
 export default fonts

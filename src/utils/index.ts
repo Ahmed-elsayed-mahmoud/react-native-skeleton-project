@@ -4,7 +4,7 @@ export const isIOS = () => Platform.OS === "ios"
 
 export const isAndroid = () => Platform.OS === "android"
 
-export const isDevEnv = () => __DEV__ === true
+export const isDevEnv = __DEV__ === true
 
 export const getDeviceVersion = () => Platform.Version
 

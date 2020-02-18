@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-community/async-storage"
-import Reactotron from "../reactotron"
+import Reactotron from "@reactnativeskeletonproject/services/reactotron"
 
 async function storeItem(
   key: string,
@@ -21,6 +21,7 @@ async function getItem(
     return await AsyncStorage.getItem(key, callback)
   } catch (error) {
     Reactotron.log(error)
+    return null
   }
 }
 

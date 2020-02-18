@@ -1,6 +1,6 @@
 const routes = {
   screenA: "screenA",
-  screenB: "screenB"
+  screenB: "screenB",
 }
 
 export default routes

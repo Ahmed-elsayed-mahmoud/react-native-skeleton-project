@@ -1,22 +1,22 @@
 import { createAppContainer } from "react-navigation"
 import { createStackNavigator } from "react-navigation-stack"
-import { isIOS } from "../utils"
-import * as Screens from "../views"
+import { isIOS } from "@reactnativeskeletonproject/utils"
+import * as Screens from "@reactnativeskeletonproject/views"
 import routes from "./routes"
 
 const appNavigator = createStackNavigator(
   {
     [routes.screenA]: {
-      screen: Screens.ScreenA
+      screen: Screens.ScreenA,
     },
     [routes.screenB]: {
-      screen: Screens.ScreenB
-    }
+      screen: Screens.ScreenB,
+    },
   },
   {
     // StackNavigatorConfig
     initialRouteName: routes.screenA,
-    headerMode: isIOS ? "none" : "screen"
+    headerMode: isIOS ? "none" : "screen",
   }
 )
 

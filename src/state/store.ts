@@ -1,9 +1,9 @@
 import Logger from "redux-logger"
 import { persistReducer, persistStore } from "redux-persist"
 import createSagaMiddleware from "redux-saga"
-import { configureStore } from "@reduxjs/toolkit"
-import Reactotron from "../services/reactotron"
-import { isDevEnv } from "../utils"
+import { configureStore, Middleware } from "@reduxjs/toolkit"
+import Reactotron from "@reactnativeskeletonproject/services/reactotron"
+import { isDevEnv } from "@reactnativeskeletonproject/utils"
 import initialState from "./initialState"
 import persistConfig from "./persistConfig"
 import rootReducer from "./rootReducer"
@@ -13,13 +13,14 @@ const configureAppStore = () => {
   // Reactotron & Saga configuration
   const sagaMonitor = Reactotron.createSagaMonitor()
   const sagaMiddleware = createSagaMiddleware({ sagaMonitor })
+  const loggerMiddleware: Middleware = Logger
 
   const appStore = configureStore({
     reducer: persistReducer(persistConfig, rootReducer),
-    middleware: isDevEnv ? [sagaMiddleware, Logger] : [sagaMiddleware],
+    middleware: isDevEnv ? [sagaMiddleware, loggerMiddleware] : [sagaMiddleware],
     devTools: false,
     preloadedState: initialState,
-    enhancers: [Reactotron.createEnhancer()]
+    enhancers: [Reactotron.createEnhancer()],
   })
 
   sagaMiddleware.run(rootSaga)
