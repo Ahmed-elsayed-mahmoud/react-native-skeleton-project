@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { Component } from "react"
 import { Text, View } from "react-native"
 import { connect } from "react-redux"
 import { IEmpty } from "@reactnativeskeletonproject/utils/types"
@@ -8,7 +8,7 @@ import styles from "./styles"
 
 type IScreenBProps = IEmpty
 
-class ScreenB extends React.Component<IHomeNavigationProps<IScreenBProps, AppRoute.ScreenB>> {
+class ScreenB extends Component<IHomeNavigationProps<IScreenBProps, AppRoute.ScreenB>> {
   public render() {
     return (
       <View style={styles.container}>

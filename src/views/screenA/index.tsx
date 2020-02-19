@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { Component } from "react"
 import { Button, Text, View } from "react-native"
 import { connect } from "react-redux"
 import { SafeAreaView } from "react-native-safe-area-context"
@@ -14,7 +14,7 @@ interface IScreenAProps {
   clickButton: () => {}
 }
 
-class ScreenA extends React.Component<IHomeNavigationProps<IScreenAProps, AppRoute.ScreenA>> {
+class ScreenA extends Component<IHomeNavigationProps<IScreenAProps, AppRoute.ScreenA>> {
   public render() {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }}>

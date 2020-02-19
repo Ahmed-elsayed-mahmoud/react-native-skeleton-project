@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { Component } from "react"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/lib/integration/react"
@@ -12,7 +12,7 @@ if (IS_DEV_ENV) {
     .catch((error) => console.error(error))
 }
 
-export default class App extends React.Component {
+export default class App extends Component {
   public render() {
     return (
       <Provider store={store}>

@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { Component } from "react"
 import { Button, View } from "react-native"
 import { connect } from "react-redux"
 import AppRoute from "@reactnativeskeletonproject/navigation/routes"
@@ -9,9 +9,7 @@ import styles from "./styles"
 
 type IForgetPasswordProps = IEmpty
 
-class Login extends React.Component<
-  IAuthNavigationProps<IForgetPasswordProps, AppRoute.ForgetPassword>
-> {
+class Login extends Component<IAuthNavigationProps<IForgetPasswordProps, AppRoute.ForgetPassword>> {
   public render() {
     return (
       <View style={styles.container}>
@@ -38,8 +36,8 @@ class Login extends React.Component<
   }
 }
 
-const mapStateToProps = (state) => ({})
+const mapStateToProps = (_) => ({})
 
-const mapDispatchToProps = (dispatch) => ({})
+const mapDispatchToProps = (_) => ({})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

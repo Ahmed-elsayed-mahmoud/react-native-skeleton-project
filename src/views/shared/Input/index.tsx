@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { View, Text, Image, ViewStyle } from "react-native"
 import { TextInput } from "react-native-gesture-handler"
 import { R } from "@reactnativeskeletonproject/res"

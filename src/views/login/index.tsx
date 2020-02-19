@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { Component } from "react"
 import { Button, View } from "react-native"
 import { connect } from "react-redux"
 import AppRoute from "@reactnativeskeletonproject/navigation/routes"
@@ -14,7 +14,7 @@ enum UserCredential {
   Password,
 }
 
-class Login extends React.Component<IAuthNavigationProps<ILoginProps, AppRoute.Login>> {
+class Login extends Component<IAuthNavigationProps<ILoginProps, AppRoute.Login>> {
   public render() {
     return (
       <View style={styles.container}>
