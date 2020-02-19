@@ -1,8 +1,8 @@
 import * as React from "react"
-import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/lib/integration/react"
-import { AppNavigator, NavigationService } from "@reactnativeskeletonproject/navigation"
+import { AppNavigator } from "@reactnativeskeletonproject/navigation"
 import { persistor, store } from "@reactnativeskeletonproject/state"
 import { IS_DEV_ENV } from "@reactnativeskeletonproject/utils"
 

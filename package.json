@@ -32,6 +32,7 @@
     "@react-navigation/stack": "^5.0.5",
     "@reduxjs/toolkit": "^1.2.3",
     "axios": "^0.19.2",
+    "flux-standard-action": "^2.1.1",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-config": "^0.12.0",
@@ -85,21 +86,17 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{ts,tsx}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "./node_modules/.bin/eslint --fix"
     ],
     "*.md": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.json": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }

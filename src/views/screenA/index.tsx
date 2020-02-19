@@ -3,9 +3,8 @@ import { Button, Text, View } from "react-native"
 import { connect } from "react-redux"
 import { SafeAreaView } from "react-native-safe-area-context"
 import AppRoute from "@reactnativeskeletonproject/navigation/routes"
-import { clickAction } from "@reactnativeskeletonproject/state/ducks/screenADucks"
+import { clickAction } from "@reactnativeskeletonproject/state/ducks/screenA"
 import { IHomeNavigationProps } from "@reactnativeskeletonproject/navigation/types"
-import { NavigationService } from "@reactnativeskeletonproject/navigation"
 import styles from "./styles"
 
 interface IScreenParams {}
@@ -29,7 +28,7 @@ class ScreenA extends React.Component<IHomeNavigationProps<IScreenAProps, AppRou
     )
   }
 
-  private navigateToScreenB = () => NavigationService.navigate(AppRoute.ScreenB)
+  private navigateToScreenB = () => this.props.navigation.navigate(AppRoute.ScreenB)
 }
 
 const mapStateToProps = (state) => ({

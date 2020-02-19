@@ -1,5 +1,8 @@
 import { combineReducers } from "redux"
-import screenAReducer from "./ducks/screenADucks"
-// import sharedReducer from "./ducks/sharedDucks"
+import { persistReducer } from "redux-persist"
+import rootPersistConfig from "./persistConfig"
+import reducers from "./reducers"
 
-export default combineReducers({ screenA: screenAReducer /*, shared: sharedReducer */ })
+const rootReducer = combineReducers(reducers)
+
+export default persistReducer(rootPersistConfig, rootReducer)
