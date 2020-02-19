@@ -1,5 +1,4 @@
-import AppContainer from "./appContainer"
+import AppNavigator from "./appNavigator"
 import NavigationService from "./navigationService"
-import routes from "./routes"
 
-export { AppContainer, NavigationService, routes }
+export { AppNavigator, NavigationService }

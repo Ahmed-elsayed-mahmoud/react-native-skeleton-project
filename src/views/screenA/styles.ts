@@ -1,18 +1,27 @@
 import { StyleSheet } from "react-native"
+import { ViewStyleSheet, TextStyleSheet } from "@reactnativeskeletonproject/utils"
 
-const styles = StyleSheet.create({
+const viewStyles = ViewStyleSheet({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF",
   },
+  button: {},
+})
+
+const textStyles = TextStyleSheet({
   text: {
     fontSize: 20,
     textAlign: "center",
     margin: 10,
   },
-  button: {},
+})
+
+const styles = StyleSheet.create({
+  ...viewStyles,
+  ...textStyles,
 })
 
 export default styles

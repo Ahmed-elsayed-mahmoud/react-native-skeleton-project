@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native"
-import { ViewStyleSheet, TextStyleSheet } from "@reactnativeskeletonproject/utils"
+import { ViewStyleSheet, TextStyleSheet } from "@reactnativeskeletonproject/utils/types"
 
 const viewStyles = ViewStyleSheet({
   container: {
@@ -7,6 +7,9 @@ const viewStyles = ViewStyleSheet({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF",
+  },
+  emailContainer: {
+    margin: 10,
   },
 })
 

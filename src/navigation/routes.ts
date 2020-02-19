@@ -1,6 +1,8 @@
-const routes = {
-  screenA: "screenA",
-  screenB: "screenB",
+enum AppRoute {
+  Login = "Login",
+  ForgetPassword = "ForgetPassword",
+  ScreenA = "ScreenA",
+  ScreenB = "ScreenB",
 }
 
-export default routes
+export default AppRoute

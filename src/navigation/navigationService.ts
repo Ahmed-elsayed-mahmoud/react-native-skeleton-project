@@ -1,44 +1,42 @@
-import {
-  NavigationActions,
-  StackActions,
-  NavigationParams,
-  NavigationNavigateAction,
-} from "react-navigation"
+import { NavigationContainerRef, StackActions } from "@react-navigation/native"
+import AppRoute from "./routes"
+import { IAppParamList } from "./types"
 
-let navigator
+type INavigator = NavigationContainerRef | null
 
-function setTopLevelNavigator(navigatorRef): void {
-  navigator = navigatorRef
+class NavigationService {
+  private _navigator: INavigator
+
+  public constructor() {
+    this._navigator = null
+  }
+
+  public setTopLevelNavigator(navigator: INavigator): void {
+    this._navigator = navigator
+  }
+
+  protected get navigator() {
+    return this._navigator
+  }
+  public navigate<R extends AppRoute>(routeName: R, params?: IAppParamList[R]) {
+    this.navigator && this.navigator.navigate({ name: routeName, params })
+  }
+
+  public goBack() {
+    this.navigator && this.navigator.goBack()
+  }
+
+  public push<R extends AppRoute>(routeName: R, params?: IAppParamList[R]) {
+    this.navigator && this.navigator.dispatch(StackActions.push(routeName, params))
+  }
+
+  public pop(numberOfScreens = 0) {
+    this.navigator && this.navigator.dispatch(StackActions.pop(numberOfScreens))
+  }
+
+  public replace<R extends AppRoute>(routeName: R, params?: IAppParamList[R]) {
+    this.navigator && this.navigator.replace(routeName, params)
+  }
 }
 
-function navigate(
-  routeName: string,
-  params?: NavigationParams,
-  action?: NavigationNavigateAction
-): void {
-  navigator.dispatch(NavigationActions.navigate({ routeName, params, action }))
-}
-
-function goBack(): void {
-  navigator.dispatch(NavigationActions.back())
-}
-
-function push(
-  routeName: string,
-  params?: NavigationParams,
-  action?: NavigationNavigateAction
-): void {
-  navigator.dispatch(StackActions.push({ routeName, params, action }))
-}
-
-function pop(numberOfScreens = 0): void {
-  navigator.dispatch(StackActions.pop({ n: numberOfScreens }))
-}
-
-export default {
-  setTopLevelNavigator,
-  navigate,
-  goBack,
-  push,
-  pop,
-}
+export default new NavigationService()

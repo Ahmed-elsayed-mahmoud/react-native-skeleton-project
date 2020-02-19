@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native"
-import { ViewStyleSheet, TextStyleSheet } from "@reactnativeskeletonproject/utils"
+import { ViewStyleSheet } from "@reactnativeskeletonproject/utils"
 
 const viewStyles = ViewStyleSheet({
   container: {
@@ -8,19 +8,13 @@ const viewStyles = ViewStyleSheet({
     alignItems: "center",
     backgroundColor: "#F5FCFF",
   },
-})
-
-const textStyles = TextStyleSheet({
-  text: {
-    fontSize: 20,
-    textAlign: "center",
+  credentialContainer: {
     margin: 10,
   },
 })
 
 const styles = StyleSheet.create({
   ...viewStyles,
-  ...textStyles,
 })
 
 export default styles

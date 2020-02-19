@@ -1,12 +1,12 @@
 import * as React from "react"
-import { SafeAreaView } from "react-navigation"
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context"
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/lib/integration/react"
-import { AppContainer, NavigationService } from "@reactnativeskeletonproject/navigation"
+import { AppNavigator, NavigationService } from "@reactnativeskeletonproject/navigation"
 import { persistor, store } from "@reactnativeskeletonproject/state"
-import { isDevEnv } from "@reactnativeskeletonproject/utils"
+import { IS_DEV_ENV } from "@reactnativeskeletonproject/utils"
 
-if (isDevEnv) {
+if (IS_DEV_ENV) {
   import("../services/reactotron")
     .then(() => console.log("Reactotron Configured"))
     .catch((error) => console.error(error))
@@ -17,11 +17,9 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }}>
-            <AppContainer
-              ref={(navigatorRef) => NavigationService.setTopLevelNavigator(navigatorRef)}
-            />
-          </SafeAreaView>
+          <SafeAreaProvider>
+            <AppNavigator authToken="" />
+          </SafeAreaProvider>
         </PersistGate>
       </Provider>
     )

@@ -1,32 +1,35 @@
 import * as React from "react"
 import { Button, Text, View } from "react-native"
-import { NavigationRoute } from "react-navigation"
-import { NavigationStackProp } from "react-navigation-stack"
 import { connect } from "react-redux"
-import routes from "@reactnativeskeletonproject/navigation/routes"
+import { SafeAreaView } from "react-native-safe-area-context"
+import AppRoute from "@reactnativeskeletonproject/navigation/routes"
 import { clickAction } from "@reactnativeskeletonproject/state/ducks/screenADucks"
+import { IHomeNavigationProps } from "@reactnativeskeletonproject/navigation/types"
+import { NavigationService } from "@reactnativeskeletonproject/navigation"
 import styles from "./styles"
 
 interface IScreenParams {}
+
 interface IScreenAProps {
   counter: number
   clickButton: () => {}
-  navigation: NavigationStackProp<NavigationRoute, IScreenParams>
 }
 
-class ScreenA extends React.Component<IScreenAProps> {
+class ScreenA extends React.Component<IHomeNavigationProps<IScreenAProps, AppRoute.ScreenA>> {
   public render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>Welcome to Screen A</Text>
-        <Text style={styles.text}>{this.props.counter}</Text>
-        <Button title={"increment"} onPress={this.props.clickButton} />
-        <Button title={"Go to Screen B"} onPress={this.navigateToScreenB} />
-      </View>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }}>
+        <View style={styles.container}>
+          <Text style={styles.text}>Welcome to Screen A</Text>
+          <Text style={styles.text}>{this.props.counter}</Text>
+          <Button title={"increment"} onPress={this.props.clickButton} />
+          <Button title={"Go to Screen B"} onPress={this.navigateToScreenB} />
+        </View>
+      </SafeAreaView>
     )
   }
 
-  private navigateToScreenB = () => this.props.navigation.navigate(routes.screenB)
+  private navigateToScreenB = () => NavigationService.navigate(AppRoute.ScreenB)
 }
 
 const mapStateToProps = (state) => ({
